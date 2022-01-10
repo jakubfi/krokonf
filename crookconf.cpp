@@ -34,6 +34,8 @@ struct crk5_kern_result * CrookConf::scan_for_kernels(QString filename)
 // -----------------------------------------------------------------------
 bool CrookConf::load(QString f, off_t o)
 {
+	loaded = false;
+
 	file.setFileName(f);
 	offset = o;
 	if (!file.open(QIODevice::ReadOnly|QIODevice::ExistingOnly)) {
@@ -45,20 +47,25 @@ bool CrookConf::load(QString f, off_t o)
 	QDataStream input(&file);
 	input.setByteOrder(QDataStream::BigEndian);
 	for (int i=0 ; i<CRK5_CFG_SIZE_WORDS ; i++) {
-			input >> data[i];
+		input >> data[i];
 	}
 
-	crk5_cfg_decode(data, &cfg);
+	if (!crk5_cfg_decode(data, &cfg)) {
+		file.close();
+		return false;
+	}
 
 	file.close();
-	loaded = true;
 
+	loaded = true;
 	return true;
 }
 
 // -----------------------------------------------------------------------
 void CrookConf::save()
 {
+	if (!loaded) return;
+
 	crk5_cfg_encode(&cfg, data);
 
 	char buf[CRK5_CFG_SIZE_BYTES];
@@ -76,6 +83,8 @@ void CrookConf::save()
 // -----------------------------------------------------------------------
 bool CrookConf::modified()
 {
+	if (!loaded) return false;
+
 	uint16_t data_test[CRK5_CFG_SIZE_WORDS];
 	crk5_cfg_encode(&cfg, data_test);
 
@@ -92,10 +101,4 @@ bool CrookConf::modified()
 	}
 
 	return false;
-}
-
-// -----------------------------------------------------------------------
-bool CrookConf::initialized()
-{
-	return loaded;
 }

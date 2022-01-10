@@ -36,6 +36,7 @@ private:
 	int dir2ui(int d);
 	int ui2dir(int d);
 
+	bool continue_with_save();
 	void closeEvent(QCloseEvent* event);
 
 public:

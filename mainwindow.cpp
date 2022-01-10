@@ -2,6 +2,7 @@
 #include <QtDebug>
 #include <QMessageBox>
 #include <QCloseEvent>
+#include <QFileInfo>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -558,10 +559,17 @@ void MainWindow::update_tab_winch_types_from_config()
 // -----------------------------------------------------------------------
 void MainWindow::load()
 {
+	if (!continue_with_save()) return;
+
+	QString title;
+	this->setWindowTitle("Krokonf");
+
 	QString filename = QFileDialog::getOpenFileName(this, tr("Otwórz obraz dysku lub plik z jądrem CROOK-5"), nullptr, nullptr);
 	if (filename.isNull()) {
 		return;
 	}
+
+	QFileInfo fi(filename);
 
 	struct crk5_kern_result *res = cfg->scan_for_kernels(filename);
 	off_t offset;
@@ -627,6 +635,9 @@ void MainWindow::load()
 	update_tab_lines_from_config();
 	update_tab_winch_types_from_config();
 
+	title = QString("%1 @%2 — Krokonf").arg(fi.fileName()).arg(offset);
+	this->setWindowTitle(title);
+
 cleanup:
 	if (res) crk5_kern_res_drop(res);
 }
@@ -634,16 +645,16 @@ cleanup:
 // -----------------------------------------------------------------------
 void MainWindow::save()
 {
+	if (!cfg->is_loaded()) return;
 	cfg->save();
 }
 
 // -----------------------------------------------------------------------
-void MainWindow::closeEvent(QCloseEvent* event)
+bool MainWindow::continue_with_save()
 {
 	// no configuration loaded or no changes made
-	if (!cfg->initialized() || !cfg->modified()) {
-		event->accept();
-		return;
+	if (!cfg->modified()) {
+		return true;
 	}
 
 	QMessageBox msgBox;
@@ -653,15 +664,24 @@ void MainWindow::closeEvent(QCloseEvent* event)
 	msgBox.setDefaultButton(QMessageBox::Save);
 
 	switch (msgBox.exec()) {
-		case QMessageBox::Cancel:
-		event->ignore();
-		break;
 	case QMessageBox::Discard:
-		event->accept();
-		break;
+		return true;
 	case QMessageBox::Save:
 		save();
-		event->accept();
-		break;
+		return true;
 	}
+
+	return false;
+}
+
+// -----------------------------------------------------------------------
+void MainWindow::closeEvent(QCloseEvent* event)
+{
+
+	if (continue_with_save()) {
+		event->accept();
+	} else {
+		event->ignore();
+	}
+
 }

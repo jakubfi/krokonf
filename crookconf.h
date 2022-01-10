@@ -25,7 +25,7 @@ public:
 	bool load(QString filename, off_t offset);
 	void save();
 	bool modified();
-	bool initialized();
+	bool is_loaded() { return loaded; }
 
 };
 
