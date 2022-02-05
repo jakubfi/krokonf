@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>577</width>
-    <height>601</height>
+    <width>815</width>
+    <height>568</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,7 +21,7 @@
        <string/>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="memory">
        <attribute name="title">
@@ -2417,7 +2417,7 @@ Nieaktywny jeśli OPRQ używany jest do resetowania MULTIX-a.
              <property name="maximum">
               <number>65535</number>
              </property>
-             <property name="displayIntegerBase">
+             <property name="displayIntegerBase" stdset="0">
               <number>16</number>
              </property>
             </widget>
@@ -2465,7 +2465,7 @@ Nieaktywny jeśli OPRQ używany jest do resetowania MULTIX-a.
              <property name="maximum">
               <number>65535</number>
              </property>
-             <property name="displayIntegerBase">
+             <property name="displayIntegerBase" stdset="0">
               <number>16</number>
              </property>
             </widget>
@@ -2484,7 +2484,7 @@ Nieaktywny jeśli OPRQ używany jest do resetowania MULTIX-a.
              <property name="maximum">
               <number>65535</number>
              </property>
-             <property name="displayIntegerBase">
+             <property name="displayIntegerBase" stdset="0">
               <number>16</number>
              </property>
             </widget>
@@ -2554,7 +2554,7 @@ Nieaktywny jeśli OPRQ używany jest do resetowania MULTIX-a.
              <property name="value">
               <number>0</number>
              </property>
-             <property name="displayIntegerBase">
+             <property name="displayIntegerBase" stdset="0">
               <number>16</number>
              </property>
             </widget>
@@ -2963,111 +2963,107 @@ Nieaktywny jeśli OPRQ używany jest do resetowania MULTIX-a.
        <attribute name="toolTip">
         <string>Opcje systemowe oraz dodatkowe moduły dołączane do systemu</string>
        </attribute>
-       <widget class="QGroupBox" name="groupBox_6">
-        <property name="geometry">
-         <rect>
-          <x>600</x>
-          <y>450</y>
-          <width>437</width>
-          <height>344</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string>Opcje systemowe</string>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QCheckBox" name="sys_sem">
-           <property name="text">
-            <string>Dołącz dodatkowe ekstrakody semaforowe</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="sys_dw3">
-           <property name="text">
-            <string>Dołącz obsługę drukarki wierszowej DW3</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="sys_lod">
-           <property name="text">
-            <string>Dołącz ekstrakody LOD i UNL</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="sys_time10x">
-           <property name="toolTip">
-            <string>jeśli opcja nie jest zaznaczona, to kwant czasu
+       <layout class="QVBoxLayout" name="verticalLayout_11">
+        <item>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="title">
+           <string>Opcje systemowe</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QCheckBox" name="sys_sem">
+             <property name="text">
+              <string>Dołącz dodatkowe ekstrakody semaforowe</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="sys_dw3">
+             <property name="text">
+              <string>Dołącz obsługę drukarki wierszowej DW3</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="sys_lod">
+             <property name="text">
+              <string>Dołącz ekstrakody LOD i UNL</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="sys_time10x">
+             <property name="toolTip">
+              <string>jeśli opcja nie jest zaznaczona, to kwant czasu
 jest równy okresowi przerwań zegarowych</string>
-           </property>
-           <property name="text">
-            <string>Kwant czasu 10x większy od okresu przerwań zegarowych</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="sys_noswap">
-           <property name="text">
-            <string>Nie zmieniaj trybu pracy na tryb z wymianami</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="sys_use4kbuf">
-           <property name="text">
-            <string>Używaj buforów po 4K przy współpracy z dyskiem</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="sys_resident">
-           <property name="text">
-            <string>Uruchamiaj wszystkie programy jako rezydujące</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="sys_diskwait">
-           <property name="toolTip">
-            <string>czas oczekiwania wynosi około 2 minuty</string>
-           </property>
-           <property name="text">
-            <string>Czekaj na gotowość dysku 5MB</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="sys_ramfiles">
-           <property name="text">
-            <string>Automatyczne tworzenie zbiorów roboczych w przestrzeni RAM</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="sys_dirlock">
-           <property name="toolTip">
-            <string>ominąć blokadę można przez ustawienie na kluczach wartości 0300 + numer końcówki</string>
-           </property>
-           <property name="text">
-            <string>Blokada zapisu do skorowidzów z pominięciem systemu zbiorów</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="sys_dircheck">
-           <property name="toolTip">
-            <string>po zapisie przeprowadzany jest odczyt i porównanie, a jeśli przewidziano kopię skorowidzu, przeprowadzany jest dodatkowo zapis, odczyt i porównanie dla kopii, natomiast przy odczycie skorowidzu porównuje się oryginał z kopią wywołując alarm w razie niezgodności</string>
-           </property>
-           <property name="text">
-            <string>Kontrola poprawności zapisu do skorowidzów</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
+             </property>
+             <property name="text">
+              <string>Kwant czasu 10x większy od okresu przerwań zegarowych</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="sys_noswap">
+             <property name="text">
+              <string>Nie zmieniaj trybu pracy na tryb z wymianami</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="sys_use4kbuf">
+             <property name="text">
+              <string>Używaj buforów po 4K przy współpracy z dyskiem</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="sys_resident">
+             <property name="text">
+              <string>Uruchamiaj wszystkie programy jako rezydujące</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="sys_diskwait">
+             <property name="toolTip">
+              <string>czas oczekiwania wynosi około 2 minuty</string>
+             </property>
+             <property name="text">
+              <string>Czekaj na gotowość dysku 5MB</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="sys_ramfiles">
+             <property name="text">
+              <string>Automatyczne tworzenie zbiorów roboczych w przestrzeni RAM</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="sys_dirlock">
+             <property name="toolTip">
+              <string>ominąć blokadę można przez ustawienie na kluczach wartości 0300 + numer końcówki</string>
+             </property>
+             <property name="text">
+              <string>Blokada zapisu do skorowidzów z pominięciem systemu zbiorów</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="sys_dircheck">
+             <property name="toolTip">
+              <string>po zapisie przeprowadzany jest odczyt i porównanie, a jeśli przewidziano kopię skorowidzu, przeprowadzany jest dodatkowo zapis, odczyt i porównanie dla kopii, natomiast przy odczycie skorowidzu porównuje się oryginał z kopią wywołując alarm w razie niezgodności</string>
+             </property>
+             <property name="text">
+              <string>Kontrola poprawności zapisu do skorowidzów</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -3130,9 +3126,6 @@ Pojedynczy bufor ma długość 272 słów.</string>
                <property name="toolTip">
                 <string>na ogół liczba końcówek zwiększona o 3</string>
                </property>
-               <property name="toolTipDuration">
-                <number>-1</number>
-               </property>
                <property name="statusTip">
                 <string/>
                </property>
@@ -3147,6 +3140,9 @@ Pojedynczy bufor ma długość 272 słów.</string>
                </property>
                <property name="buddy">
                 <cstring>sys_dirvec</cstring>
+               </property>
+               <property name="toolTipDuration" stdset="0">
+                <number>-1</number>
                </property>
               </widget>
              </item>
@@ -3369,8 +3365,8 @@ Pojedynczy bufor ma długość 272 słów.</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>577</width>
-     <height>30</height>
+     <width>815</width>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
