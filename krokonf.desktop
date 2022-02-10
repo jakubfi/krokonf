@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Krokonf
+Comment=CROOK-5 configuration editor
+Comment[en]=CROOK-5 configuration editor
+Comment[pl]=Edytor konfiguracji CROOK-5
+Icon=krokonf
+Exec=krokonf
+Terminal=false
+Categories=Settings;Qt;KDE
+Keywords=crook;mera
+StartupNotify=true

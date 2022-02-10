@@ -9,7 +9,7 @@ qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR}/src
 add_custom_target(translations ALL DEPENDS ${QM_FILES})
 
 install(FILES ${QM_FILES}
-		DESTINATION ${TRANSLATIONS_INSTALL_SUBDIR}
+		DESTINATION ${TRANSLATIONS_INSTALL_DIR}
 )
 
 # vim: tabstop=4
