@@ -4,16 +4,13 @@
 #include <QApplication>
 #include <QTranslator>
 
-#define xstr(s) str(s)
-#define str(s) #s
-
 // -----------------------------------------------------------------------
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
 
 	QTranslator trans;
-	trans.load(QLocale(), "krokonf", "_", xstr (INSTALL_PREFIX)"/share/krokonf/translations/");
+	trans.load(QLocale(), "krokonf", "_", TRANSLATIONS_DIR);
 	a.installTranslator(&trans);
 	CrookConf c;
 	MainWindow w(&c);
