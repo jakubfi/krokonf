@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Krokonf</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/icons/krokonf.svg</normaloff>:/icons/krokonf.svg</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
@@ -3467,6 +3471,8 @@ Pojedynczy bufor ma długość 272 słów.</string>
   <tabstop>line_list</tabstop>
   <tabstop>mem_init</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

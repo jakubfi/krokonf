@@ -42,3 +42,6 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = $$PREFIX/bin
 !isEmpty(target.path): INSTALLS += target
 
+RESOURCES += \
+    ui/resources.qrc
+
