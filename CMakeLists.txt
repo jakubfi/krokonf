@@ -16,8 +16,8 @@ if(CMAKE_VERSION VERSION_LESS "3.7.0")
     set(CMAKE_INCLUDE_CURRENT_DIR ON)
 endif()
 
-set(CMAKE_INSTALL_SHAREDIR ${CMAKE_INSTALL_PREFIX}/share)
-set(TRANSLATIONS_INSTALL_DIR ${CMAKE_INSTALL_SHAREDIR}/krokonf/translations)
+set(KROKONF_INSTALL_SHAREDIR ${CMAKE_INSTALL_PREFIX}/share)
+set(TRANSLATIONS_INSTALL_DIR ${KROKONF_INSTALL_SHAREDIR}/krokonf/translations)
 
 add_subdirectory(translations)
 
@@ -38,15 +38,13 @@ add_executable(krokonf
 	src/mainwindow.ui
 	resources.qrc
 )
-
 target_include_directories(krokonf PRIVATE ${CMAKE_BINARY_DIR})
-target_include_directories(krokonf PUBLIC SYSTEM ${EMCRK_INCLUDE_DIRS})
 target_compile_options(krokonf PUBLIC -Wall)
 target_compile_definitions(krokonf PRIVATE TRANSLATIONS_DIR="${TRANSLATIONS_INSTALL_DIR}")
 
 target_link_libraries(krokonf
 	Qt5::Widgets
-	${EMCRK_LIBRARIES}
+	emcrk
 )
 
 install(TARGETS krokonf
@@ -54,11 +52,11 @@ install(TARGETS krokonf
 )
 
 install(FILES krokonf.desktop
-	DESTINATION ${CMAKE_INSTALL_SHAREDIR}/applications
+	DESTINATION ${KROKONF_INSTALL_SHAREDIR}/applications
 )
 
 install(FILES icons/krokonf.svg
-	DESTINATION ${CMAKE_INSTALL_SHAREDIR}/icons/hicolor/scalable/apps
+	DESTINATION ${KROKONF_INSTALL_SHAREDIR}/icons/hicolor/scalable/apps
 )
 
 # vim: tabstop=4
