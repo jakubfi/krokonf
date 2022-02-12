@@ -224,41 +224,41 @@ jest równy okresowi przerwań zegarowych</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3097"/>
+        <location filename="../src/mainwindow.ui" line="3110"/>
         <source>Bufory są przydzielane dynamicznie i używanye przy dostępie do zbiorów dyskowych. Pojedynczy bufor ma długość 272 słów.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3100"/>
+        <location filename="../src/mainwindow.ui" line="3113"/>
         <source>Liczba buforów systemowych</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3119"/>
+        <location filename="../src/mainwindow.ui" line="3132"/>
         <source>Bufory są przydzielane dynamicznie i używanye
 przy dostępie do zbiorów dyskowych.
 Pojedynczy bufor ma długość 272 słów.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3131"/>
-        <location filename="../src/mainwindow.ui" line="3162"/>
+        <location filename="../src/mainwindow.ui" line="3144"/>
+        <location filename="../src/mainwindow.ui" line="3175"/>
         <source>na ogół liczba końcówek zwiększona o 3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3172"/>
-        <location filename="../src/mainwindow.ui" line="3194"/>
+        <location filename="../src/mainwindow.ui" line="3185"/>
+        <location filename="../src/mainwindow.ui" line="3207"/>
         <source>jeden blok = 4 Ksłowa</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3175"/>
+        <location filename="../src/mainwindow.ui" line="3188"/>
         <source>Liczba bloków pamięci zajętych na stałe przez system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3207"/>
+        <location filename="../src/mainwindow.ui" line="3220"/>
         <source>Długość buforów przydzielanych do końcówek użytkowników</source>
         <translation type="unfinished"></translation>
     </message>
@@ -658,7 +658,7 @@ Pojedynczy bufor ma długość 272 słów.</source>
     <message>
         <location filename="../src/mainwindow.ui" line="840"/>
         <location filename="../src/mainwindow.ui" line="2743"/>
-        <location filename="../src/mainwindow.ui" line="3239"/>
+        <location filename="../src/mainwindow.ui" line="3252"/>
         <source>MULTIX</source>
         <translation type="unfinished"></translation>
     </message>
@@ -985,58 +985,58 @@ Nieaktywny jeśli OPRQ używany jest do resetowania MULTIX-a.
         <translation type="unfinished">Drive 1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3242"/>
+        <location filename="../src/mainwindow.ui" line="3255"/>
         <source>Parametry linii szeregowych MULTIX-a, ustawiane wstępnie przy starcie systemu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3248"/>
+        <location filename="../src/mainwindow.ui" line="3261"/>
         <source>Parametry linii szeregowych MULTIX-a ustawiane wstępnie przy starcie systemu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3257"/>
+        <location filename="../src/mainwindow.ui" line="3270"/>
         <source>Włącz automatyczną obsługę MULTIX-a</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3264"/>
+        <location filename="../src/mainwindow.ui" line="3277"/>
         <source>Nie sprawdzaj, nie generuj parzystości</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3271"/>
+        <location filename="../src/mainwindow.ui" line="3284"/>
         <source>Sprawdzaj, generuj nieparzystość</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3278"/>
+        <location filename="../src/mainwindow.ui" line="3291"/>
         <source>Przekazuj 8 bitów</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3285"/>
+        <location filename="../src/mainwindow.ui" line="3298"/>
         <source>Włącz protokół X-ON, X-OFF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3292"/>
+        <location filename="../src/mainwindow.ui" line="3305"/>
         <source>Obsługuj BS i CAN (tylko dla monitora)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3299"/>
+        <location filename="../src/mainwindow.ui" line="3312"/>
         <source>Zmień małe litery na duże na wyjściu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3314"/>
-        <location filename="../src/mainwindow.ui" line="3330"/>
+        <location filename="../src/mainwindow.ui" line="3327"/>
+        <location filename="../src/mainwindow.ui" line="3343"/>
         <source>pojedynczy wektor ma rozmiar 10 słów</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3333"/>
+        <location filename="../src/mainwindow.ui" line="3346"/>
         <source>Liczba wektorów używanych do opisu strumieni</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1156,72 +1156,72 @@ Nieaktywny jeśli OPRQ używany jest do resetowania MULTIX-a.
         <translation type="unfinished">Line count</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3074"/>
+        <location filename="../src/mainwindow.ui" line="3087"/>
         <source>Bufory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3080"/>
+        <location filename="../src/mainwindow.ui" line="3093"/>
         <source>Pamięć zarezerwowana na bufory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3143"/>
+        <location filename="../src/mainwindow.ui" line="3156"/>
         <source>Liczba tablic do opisu użytkownika i bieżącego skorowidza</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3251"/>
+        <location filename="../src/mainwindow.ui" line="3264"/>
         <source>Domyślne parametry linii szeregowych</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3378"/>
+        <location filename="../src/mainwindow.ui" line="3391"/>
         <source>Plik</source>
         <translation type="unfinished">File</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3392"/>
+        <location filename="../src/mainwindow.ui" line="3405"/>
         <source>&amp;Otwórz...</source>
         <translation type="unfinished">&amp;Open...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3395"/>
+        <location filename="../src/mainwindow.ui" line="3408"/>
         <source>Ctrl+O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3400"/>
+        <location filename="../src/mainwindow.ui" line="3413"/>
         <source>&amp;Zapisz</source>
         <translation type="unfinished">&amp;Save</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3403"/>
+        <location filename="../src/mainwindow.ui" line="3416"/>
         <source>Ctrl+S</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3408"/>
+        <location filename="../src/mainwindow.ui" line="3421"/>
         <source>&amp;Eksportuj...</source>
         <translation type="unfinished">&amp;Export...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3411"/>
+        <location filename="../src/mainwindow.ui" line="3424"/>
         <source>Ctrl+E</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3416"/>
+        <location filename="../src/mainwindow.ui" line="3429"/>
         <source>&amp;Wyjście</source>
         <translation type="unfinished">&amp;Quit</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3421"/>
+        <location filename="../src/mainwindow.ui" line="3434"/>
         <source>&amp;Importuj...</source>
         <translation type="unfinished">&amp;Import...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3424"/>
+        <location filename="../src/mainwindow.ui" line="3437"/>
         <source>Ctrl+I</source>
         <translation type="unfinished"></translation>
     </message>
