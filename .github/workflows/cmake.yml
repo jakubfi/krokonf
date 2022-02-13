@@ -39,7 +39,6 @@ jobs:
         run: sudo cmake --install ${{github.workspace}}/build
 
   Win64-build:
-    if: ${{ false }}
     name: Win64 build
     runs-on: windows-latest
     strategy:
@@ -75,5 +74,3 @@ jobs:
         run: ./.ci/ci-script.sh build
       - name: Install
         run: ./.ci/ci-script.sh install
-      - name: Test
-        run: ./.ci/ci-script.sh test
