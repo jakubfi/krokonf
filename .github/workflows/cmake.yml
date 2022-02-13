@@ -26,7 +26,7 @@ jobs:
       - name: Install packages for ${{matrix.compiler.compiler}}
         run: sudo apt-get -y install ${{matrix.compiler.packages}}
       - name: Install dependencies
-        run: sudo apt-get -y install qttools5-dev libqwt-qt5-dev libqwt-qt5 
+        run: sudo apt-get -y install qttools5-dev libqt5widgets5
       - name: Build and install emcrk
         run: git clone https://github.com/jakubfi/emcrk && cd emcrk && mkdir build && cd build && cmake .. && make && sudo make install && sudo ldconfig
       - name: Configure project
