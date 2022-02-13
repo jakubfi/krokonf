@@ -12,8 +12,6 @@ case $ACTION in
 		cmake emcrk -G "Unix Makefiles" -B emcrk/build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/mingw64
 		cmake --build emcrk/build
 		cmake --install emcrk/build
-		echo === Installing QT5 ===========================================
-		pacman -S mingw-w64-x86_64-qt5-static
 	;;
 
 	configure)

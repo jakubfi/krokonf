@@ -64,6 +64,7 @@ jobs:
             git
             mingw-w64-x86_64-toolchain
             mingw-w64-x86_64-cmake
+            mingw-w64-x86_64-qt5-static
           update: true
       - uses: actions/checkout@v2
       - name: Initialize
