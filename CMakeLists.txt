@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1.0)
+cmake_minimum_required(VERSION 3.10)
 
 project(krokonf
 	DESCRIPTION "CROOK-5 configuration editor"
