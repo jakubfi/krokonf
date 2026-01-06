@@ -12,21 +12,19 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [ ubuntu-20.04 ]
+        os: [ ubuntu-latest ]
         compiler:
-          - { compiler: GNU10, CC: gcc-10, CXX: g++-10, packages: gcc-10 g++-10 }
-          - { compiler: LLVM12, CC: clang-12, CXX: clang++-12, packages: clang-12 libomp-12-dev libclang-common-12-dev llvm-12-dev clang++-12 libc++-12-dev libc++1-12 libc++abi1-12 lld-12 }
+          - { compiler: GCC, CC: gcc, CXX: g++ }
+          - { compiler: CLANG, CC: clang, CXX: clang++ }
     env:
       BUILD_TYPE: Release
       CC: ${{matrix.compiler.CC}}
       CXX: ${{matrix.compiler.CXX}}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Update repositories
         run: sudo apt-get update
-      - name: Install packages for ${{matrix.compiler.compiler}}
-        run: sudo apt-get -y install ${{matrix.compiler.packages}}
       - name: Install dependencies
         run: sudo apt-get -y install qttools5-dev libqt5widgets5
       - name: Build and install emcrk
