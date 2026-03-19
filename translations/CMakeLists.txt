@@ -2,7 +2,7 @@
 
 find_package(Qt6 COMPONENTS Core LinguistTools REQUIRED)
 
-qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR}/src
+qt6_create_translation(QM_FILES ${CMAKE_SOURCE_DIR}/src
 	krokonf_en.ts
 )
 
