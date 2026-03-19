@@ -69,11 +69,18 @@ jobs:
             mingw-w64-x86_64-qt6-declarative
           update: true
       - uses: actions/checkout@v2
-      - name: Initialize
-        run: ./.ci/ci-script.sh init
+      - name: Build emcrk
+        run: |
+          git clone https://github.com/jakubfi/emcrk
+          cmake -E make_directory emcrk/build
+          cmake emcrk -B emcrk/build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/mingw64
+          cmake --build emcrk/build
+          cmake --install emcrk/build
       - name: Configure
-        run: ./.ci/ci-script.sh configure
+        run: |
+          cmake -E make_directory ${{github.workspace}}/build
+          cmake ${{github.workspace}} -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/mingw64
       - name: Build
-        run: ./.ci/ci-script.sh build
+        run: cmake --build ${{github.workspace}}/build
       - name: Install
-        run: ./.ci/ci-script.sh install
+        run: cmake --install ${{github.workspace}}/build
