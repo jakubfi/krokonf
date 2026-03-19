@@ -79,8 +79,8 @@ jobs:
       - name: Configure
         run: |
           cmake -E make_directory "${{github.workspace}}/build"
-          cmake "${{github.workspace}}" -B "${{github.workspace}}/build" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/mingw64
+          cmake "${{env.SRC_DIR}}" -B "${{env.BUILD_DIR}}" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/mingw64
       - name: Build
-        run: cmake --build "${{github.workspace}}/build"
+        run: cmake --build "${{env.BUILD_DIR}}"
       - name: Install
-        run: cmake --install "${{github.workspace}}/build"
+        run: cmake --install "${{env.BUILD_DIR}}"
