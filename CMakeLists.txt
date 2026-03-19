@@ -23,7 +23,7 @@ add_subdirectory(translations)
 
 # ---- Target: krokonf ---------------------------------------------------
 
-find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
+find_package(Qt6 COMPONENTS Core Widgets REQUIRED)
 find_package(emcrk REQUIRED)
 
 add_executable(krokonf
@@ -43,7 +43,7 @@ target_compile_options(krokonf PUBLIC -Wall)
 target_compile_definitions(krokonf PRIVATE TRANSLATIONS_DIR="${TRANSLATIONS_INSTALL_DIR}")
 
 target_link_libraries(krokonf
-	Qt5::Widgets
+	Qt6::Widgets
 	emcrk
 )
 
