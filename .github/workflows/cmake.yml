@@ -64,6 +64,7 @@ jobs:
             mingw-w64-x86_64-cmake
             mingw-w64-x86_64-qt6-base
             mingw-w64-x86_64-qt6-tools
+            mingw-w64-x86_64-qt6-translations
           update: true
       - uses: actions/checkout@v2
       - name: Initialize
