@@ -26,7 +26,7 @@ jobs:
       - name: Update repositories
         run: sudo apt-get update
       - name: Install dependencies
-        run: sudo apt-get -y install qt6-base-dev libqt6widgets6
+        run: sudo apt-get -y install qt6-base-dev qt6-tools-dev libqt6widgets6
       - name: Build and install emcrk
         run: git clone https://github.com/jakubfi/emcrk && cd emcrk && mkdir build && cd build && cmake .. && make && sudo make install && sudo ldconfig
       - name: Configure project
