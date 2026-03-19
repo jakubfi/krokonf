@@ -78,9 +78,9 @@ jobs:
           cmake --install emcrk/build
       - name: Configure
         run: |
-          cmake -E make_directory ${{github.workspace}}/build
-          cmake ${{github.workspace}} -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/mingw64
+          cmake -E make_directory "${{github.workspace}}/build"
+          cmake "${{github.workspace}}" -B "${{github.workspace}}/build" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/mingw64
       - name: Build
-        run: cmake --build ${{github.workspace}}/build
+        run: cmake --build "${{github.workspace}}/build"
       - name: Install
-        run: cmake --install ${{github.workspace}}/build
+        run: cmake --install "${{github.workspace}}/build"
