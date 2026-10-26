@@ -46,7 +46,7 @@ public:
 
 private slots:
 	void load();
-	void save();
+	bool save();
 
 	void on_mem_list_currentRowChanged(int row);
 	void on_mem_blocks_valueChanged(int blocks);

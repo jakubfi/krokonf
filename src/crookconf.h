@@ -23,7 +23,7 @@ public:
 	~CrookConf();
 	struct crk5_kern_result * scan_for_kernels(QString filename);
 	bool load(QString filename, off_t offset);
-	void save();
+	bool save();
 	bool modified();
 	bool is_loaded() { return loaded; }
 

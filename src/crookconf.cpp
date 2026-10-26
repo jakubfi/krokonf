@@ -62,22 +62,28 @@ bool CrookConf::load(QString f, off_t o)
 }
 
 // -----------------------------------------------------------------------
-void CrookConf::save()
+bool CrookConf::save()
 {
-	if (!loaded) return;
+	if (!loaded) return false;
 
-	crk5_cfg_encode(&cfg, data);
+	uint16_t new_data[CRK5_CFG_SIZE_WORDS];
+	crk5_cfg_encode(&cfg, new_data);
 
 	char buf[CRK5_CFG_SIZE_BYTES];
 	for (int i=0 ; i<CRK5_CFG_SIZE_WORDS ; i++) {
-			buf[2*i] = data[i] >> 8;
-			buf[2*i+1] = data[i] & 0xff;
+			buf[2*i] = new_data[i] >> 8;
+			buf[2*i+1] = new_data[i] & 0xff;
 	}
 
-	file.open(QIODevice::ReadWrite|QIODevice::ExistingOnly);
-	file.seek(offset);
-	file.write(buf, CRK5_CFG_SIZE_BYTES);
+	if (!file.open(QIODevice::ReadWrite|QIODevice::ExistingOnly)) {
+		return false;
+	}
+	bool ok = file.seek(offset) && (file.write(buf, CRK5_CFG_SIZE_BYTES) == CRK5_CFG_SIZE_BYTES);
 	file.close();
+	if (!ok) return false;
+
+	memcpy(data, new_data, sizeof(data));
+	return true;
 }
 
 // -----------------------------------------------------------------------

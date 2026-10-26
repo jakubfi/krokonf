@@ -649,10 +649,16 @@ cleanup:
 }
 
 // -----------------------------------------------------------------------
-void MainWindow::save()
+bool MainWindow::save()
 {
-	if (!cfg->is_loaded()) return;
-	cfg->save();
+	if (!cfg->is_loaded()) return false;
+	if (!cfg->save()) {
+		QMessageBox msgBox;
+		msgBox.setText(tr("Nie udało się zapisać konfiguracji"));
+		msgBox.exec();
+		return false;
+	}
+	return true;
 }
 
 // -----------------------------------------------------------------------
@@ -673,8 +679,7 @@ bool MainWindow::continue_with_save()
 	case QMessageBox::Discard:
 		return true;
 	case QMessageBox::Save:
-		save();
-		return true;
+		return save();
 	}
 
 	return false;

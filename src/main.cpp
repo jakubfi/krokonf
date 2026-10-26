@@ -10,8 +10,9 @@ int main(int argc, char *argv[])
 	QApplication a(argc, argv);
 
 	QTranslator trans;
-	trans.load(QLocale(), "krokonf", "_", TRANSLATIONS_DIR);
-	a.installTranslator(&trans);
+	if (trans.load(QLocale(), "krokonf", "_", TRANSLATIONS_DIR)) {
+		a.installTranslator(&trans);
+	}
 	CrookConf c;
 	MainWindow w(&c);
 	w.show();

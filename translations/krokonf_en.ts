@@ -1277,12 +1277,17 @@ Nieaktywny jeśli OPRQ używany jest do resetowania MULTIX-a.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="667"/>
+        <location filename="../src/mainwindow.cpp" line="657"/>
+        <source>Nie udało się zapisać konfiguracji</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="673"/>
         <source>Konfiguracja została zmodyfikowana.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="668"/>
+        <location filename="../src/mainwindow.cpp" line="674"/>
         <source>Chcesz zapisac zmiany?</source>
         <translation type="unfinished"></translation>
     </message>
