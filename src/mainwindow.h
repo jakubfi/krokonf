@@ -42,6 +42,7 @@ private:
 public:
 	MainWindow(CrookConf *conf, QWidget *parent = nullptr);
 	~MainWindow();
+	void open_file(const QString &filename);
 
 private slots:
 	void load();

@@ -561,13 +561,19 @@ void MainWindow::load()
 {
 	if (!continue_with_save()) return;
 
-	QString title;
-	this->setWindowTitle("Krokonf");
-
 	QString filename = QFileDialog::getOpenFileName(this, tr("Otwórz obraz dysku lub plik z jądrem CROOK-5"), nullptr, nullptr);
 	if (filename.isNull()) {
 		return;
 	}
+
+	open_file(filename);
+}
+
+// -----------------------------------------------------------------------
+void MainWindow::open_file(const QString &filename)
+{
+	QString title;
+	this->setWindowTitle("Krokonf");
 
 	QFileInfo fi(filename);
 

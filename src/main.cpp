@@ -15,5 +15,8 @@ int main(int argc, char *argv[])
 	CrookConf c;
 	MainWindow w(&c);
 	w.show();
+	if (a.arguments().size() > 1) {
+		w.open_file(a.arguments().at(1));
+	}
 	return a.exec();
 }

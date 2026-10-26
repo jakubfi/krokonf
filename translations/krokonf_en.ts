@@ -1267,22 +1267,22 @@ Nieaktywny jeśli OPRQ używany jest do resetowania MULTIX-a.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="567"/>
+        <location filename="../src/mainwindow.cpp" line="564"/>
         <source>Otwórz obraz dysku lub plik z jądrem CROOK-5</source>
         <translation type="unfinished">Open disk image or CROOK-5 kernel</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="579"/>
+        <location filename="../src/mainwindow.cpp" line="585"/>
         <source>W pliku nie znaleziono jądra CROOK-5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="661"/>
+        <location filename="../src/mainwindow.cpp" line="667"/>
         <source>Konfiguracja została zmodyfikowana.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="662"/>
+        <location filename="../src/mainwindow.cpp" line="668"/>
         <source>Chcesz zapisac zmiany?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1291,17 +1291,17 @@ Nieaktywny jeśli OPRQ używany jest do resetowania MULTIX-a.
         <translation type="obsolete">This file does not contain any CROOK-5 kernel</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="594"/>
+        <location filename="../src/mainwindow.cpp" line="600"/>
         <source>Wersja %3/%4 dla %5 (%2zainstalowany, offset %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="596"/>
+        <location filename="../src/mainwindow.cpp" line="602"/>
         <source>nie </source>
         <translation type="unfinished">no </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="617"/>
+        <location filename="../src/mainwindow.cpp" line="623"/>
         <source>Nie udało się załadować konfiguracji</source>
         <translation type="unfinished">Unable to load configuration</translation>
     </message>
